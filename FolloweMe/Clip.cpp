@@ -28,11 +28,11 @@ int Clip::chooseFollowAction()
 {
 	return 0;
 }
-int Clip::playClip()
+int Clip::playClip(int* idx,int* engineTickNum)
 {
-	while (m_itickCounter > 0)
+	while (m_itickCounter > 0 && *engineTickNum > 0)
 	{
-		--m_itickCounter;
+		--m_itickCounter; --(*engineTickNum);
 		std::cout << m_clipName + " ";
 	}
 

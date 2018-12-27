@@ -19,9 +19,9 @@ void Engine::Run()
 
 void Engine::runClips()
 {
-	for (int idx = 0; idx < m_vClips.size(); idx++)
+	for (int idx = 0; (idx < m_vClips.size()) && m_iTickNum > 0; idx++)
 	{
-		m_vClips[idx].playClip();
+		m_vClips[idx].playClip(&idx, &m_iTickNum);
 	}
 }
 
