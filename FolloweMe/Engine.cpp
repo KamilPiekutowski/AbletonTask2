@@ -14,10 +14,15 @@ Engine::~Engine()
 void Engine::Run()
 {
 	getInput();
+	runClips();
 }
 
 void Engine::runClips()
 {
+	for (int idx = 0; idx < m_vClips.size(); idx++)
+	{
+		m_vClips[idx].playClip();
+	}
 }
 
 void Engine::runInputCommands(std::vector<std::string> *parsedCommands)
@@ -29,16 +34,17 @@ void Engine::addClip(Clip clip)
 
 }
 
-std::vector<std::string> Engine::getInput()
+void Engine::getInput()
 {
 	std::vector<std::string> inputCommands;
 	std::string command;
+	std::vector<std::string> tokens;
 
 
 	while (command != "ticks")
 	{
 		std::getline(std::cin, command);
-		std::vector<std::string> tokens = tokenizeString(command);
+		tokens = tokenizeString(command);
 
 		command = tokens[0];
 
@@ -65,9 +71,14 @@ std::vector<std::string> Engine::getInput()
 			));
 		}
 
+		
 	}
 
-	return inputCommands;
+	//get engine tick count
+	std::string::size_type sz;
+
+	m_iTickNum = std::stoi(tokens[1], &sz);
+	m_iTickCOunter = m_iTickNum;
 }
 
 std::vector<std::string> Engine::tokenizeString(std::string str)

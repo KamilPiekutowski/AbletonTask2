@@ -2,6 +2,7 @@
 #include <string>
 #include "IClip.h"
 #include "IFollowActionFunctor.h"
+#include <iostream>
 class Clip :
 	public IClip
 {
@@ -22,7 +23,7 @@ public:
 	~Clip();
 
 	//members
-	std::string clipName;
+	std::string m_clipName;
 	int m_iTickNum;
 	int m_itickCounter;
 	int * m_iPtrChancePool;
@@ -35,6 +36,6 @@ public:
 	int chooseFollowAction();
 	int playClip();
 	int resetTickCount();
-	int* createChancePool(double followChance1, double followChance2);
+	void createChancePool(double followChance1, double followChance2);
 };
 

@@ -25,7 +25,7 @@ public:
 	void runInputCommands(std::vector<std::string> *parsedCommands);
 	void addClip(Clip clip);
 	IFollowActionFunctor* createFollowActionFunctor(std::string followActionFunctrName);
-	std::vector<std::string> getInput();
+	void getInput();
 
 private:
 	//private methods

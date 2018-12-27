@@ -10,10 +10,10 @@ Clip::Clip(
 	IFollowActionFunctor* followAction1,
 	IFollowActionFunctor* followAction2)
 {
-	clipName = name;
+	m_clipName = name;
 	m_iTickNum = clTicksToPlay;
 	m_itickCounter = clTicksToPlay;
-	int * m_iPtrChancePool = createChancePool(followChance1, followChance2);
+	createChancePool(followChance1, followChance2);
 
 	FollowAction1 = followAction1;
 	FollowAction2 = followAction2;
@@ -30,31 +30,39 @@ int Clip::chooseFollowAction()
 }
 int Clip::playClip()
 {
+	while (m_itickCounter > 0)
+	{
+		--m_itickCounter;
+		std::cout << m_clipName + " ";
+	}
+
+	resetTickCount();
+
 	return 0;
 }
 int Clip::resetTickCount()
 {
 	m_itickCounter = m_iTickNum;
+
 	return 0;
 }
 
-int* Clip::createChancePool(double followChance1, double followChance2)
+void Clip::createChancePool(double followChance1, double followChance2)
 {
 	int intFollowCh1 = (int) followChance1 * 10;
 	int intFollowCh2 = (int) followChance2 * 10;
 	int poolSize = followChance1 + followChance2;
-	int* newChancePool = new int[poolSize];
+	m_iPtrChancePool = new int[poolSize];
 
 	//populate the chance pool;
 	int idx = 0;
 	for (; idx < followChance1; ++idx)
 	{
-		newChancePool[idx] = ACTION_1_CHANCE;
+		m_iPtrChancePool[idx] = ACTION_1_CHANCE;
 	}
 	for (; idx < poolSize; ++idx)
 	{
-		newChancePool[idx] = ACTION_2_CHANCE;
+		m_iPtrChancePool[idx] = ACTION_2_CHANCE;
 	}
 
-	return newChancePool;
 }
