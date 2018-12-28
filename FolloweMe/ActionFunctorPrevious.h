@@ -6,7 +6,7 @@ class ActionFunctorPrevious :
 public:
 
 	void operator()(int* clipArrIdx, int clipArrSize) {
-		(*clipArrIdx)--; (*clipArrIdx)--;
+		(*clipArrIdx)--;
 		if ((*clipArrIdx) < -1)
 		{
 			(*clipArrIdx) = -1;

@@ -23,8 +23,11 @@ void Engine::Run()
 
 void Engine::runClips()
 {
-	for (int idx = 0; (idx < m_vClips.size()) && m_iTickNum > 0; idx++)
+	int idx = 0;
+	while ((idx < m_vClips.size()) && (m_iTickNum > 0))
 	{
+		int size = m_vClips.size();
+		int a = idx;
 		m_vClips[idx]->playClip(&idx, m_vClips.size(), &m_iTickNum);
 	}
 }

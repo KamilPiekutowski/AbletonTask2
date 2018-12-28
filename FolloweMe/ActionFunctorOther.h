@@ -15,7 +15,7 @@ public:
 			otherClipArrIdx = (rand() % clipArrSize);
 		}
 		
-		*clipArrIdx = otherClipArrIdx -1;
+		*clipArrIdx = otherClipArrIdx;
 	};
 };
 

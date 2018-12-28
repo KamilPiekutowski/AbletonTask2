@@ -1,26 +1,6 @@
-﻿  pch.cpp
-  ActionFunctorAny.cpp
-c:\users\me\source\repos\followeme\followeme\actionfunctorany.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ActionFunctorFactory.cpp
+﻿  Clip.cpp
 c:\users\me\source\repos\followeme\followeme\actionfunctorany.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 c:\users\me\source\repos\followeme\followeme\actionfunctorother.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ActionFunctorNext.cpp
-  ActionFunctorNone.cpp
-  ActionFunctorOther.cpp
-c:\users\me\source\repos\followeme\followeme\actionfunctorother.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ActionFunctorPrevious.cpp
-  Clip.cpp
-c:\users\me\source\repos\followeme\followeme\actionfunctorany.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\me\source\repos\followeme\followeme\actionfunctorother.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\me\source\repos\followeme\followeme\clip.cpp(85): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  Engine.cpp
-c:\users\me\source\repos\followeme\followeme\actionfunctorany.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\me\source\repos\followeme\followeme\actionfunctorother.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\me\source\repos\followeme\followeme\engine.cpp(12): warning C4018: '<': signed/unsigned mismatch
-c:\users\me\source\repos\followeme\followeme\engine.cpp(26): warning C4018: '<': signed/unsigned mismatch
-  FollowActionFunctor.cpp
-  FolloweMe.cpp
-c:\users\me\source\repos\followeme\followeme\actionfunctorany.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\me\source\repos\followeme\followeme\actionfunctorother.h(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+c:\users\me\source\repos\followeme\followeme\clip.cpp(47): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\me\source\repos\followeme\followeme\clip.cpp(90): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   FolloweMe.vcxproj -> C:\Users\ME\source\repos\FolloweMe\Debug\FolloweMe.exe

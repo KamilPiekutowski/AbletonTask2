@@ -27,6 +27,7 @@ public:
 	int m_iTickNum;
 	int m_itickCounter;
 	int * m_iPtrChancePool;
+	int m_chancePoolSize;
 	
 
 	//methods

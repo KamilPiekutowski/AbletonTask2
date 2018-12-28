@@ -6,7 +6,7 @@ class ActionFunctorNext :
 public:
 
 	void operator()(int* clipArrIdx, int clipArrSize) {
-		//do nothing
+		(*clipArrIdx)++;
 	};
 };
 

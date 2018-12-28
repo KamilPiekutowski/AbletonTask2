@@ -44,14 +44,19 @@ Clip::~Clip()
 
 int Clip::chooseFollowAction()
 {
-	return 0;
+	srand(time(NULL));
+
+
+	int pick = (rand() % m_chancePoolSize);
+	
+	return m_iPtrChancePool[pick];
 }
 int Clip::playClip(int* idx, int clipArrSize, int* engineTickNum)
 {
 	while (m_itickCounter > 0 && *engineTickNum > 0)
 	{
 		--m_itickCounter; --(*engineTickNum);
-		std::cout << m_clipName + " ";
+		std::cout << m_clipName + "\n";
 	}
 
 	if(*engineTickNum > 0) //only if there are any ticks left from the engine
@@ -83,7 +88,9 @@ void Clip::createChancePool(double followChance1, double followChance2)
 	int intFollowCh1 = (int) followChance1 * 10;
 	int intFollowCh2 = (int) followChance2 * 10;
 	int poolSize = followChance1 + followChance2;
+	m_chancePoolSize = poolSize;
 	m_iPtrChancePool = new int[poolSize];
+
 
 	//populate the chance pool;
 	int idx = 0;

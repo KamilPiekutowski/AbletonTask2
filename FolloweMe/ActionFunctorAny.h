@@ -7,7 +7,7 @@ class ActionFunctorAny :
 public:
 	void operator()(int* clipArrIdx, int clipArrSize) {
 		srand(time(NULL));
-		*clipArrIdx = (rand() % clipArrSize) -1;
+		*clipArrIdx = (rand() % clipArrSize);
 	};
 };
 
