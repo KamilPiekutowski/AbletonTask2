@@ -13,10 +13,10 @@ public:
 
 		while (otherClipArrIdx == *clipArrIdx)
 		{
-			otherClipArrIdx = rand() % (clipArrSize-1);
+			otherClipArrIdx = (rand() % clipArrSize);
 		}
 		
-		*clipArrIdx = otherClipArrIdx;
+		*clipArrIdx = otherClipArrIdx -1;
 	};
 };
 

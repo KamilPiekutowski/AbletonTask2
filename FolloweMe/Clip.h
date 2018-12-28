@@ -34,7 +34,7 @@ public:
 	IFollowActionFunctor* FollowAction2; //this behaves like a method
 
 	int chooseFollowAction();
-	int playClip(int *idx, int* engineTickNum);
+	int playClip(int* idx, int clipArrSize, int* engineTickNum);
 	int resetTickCount();
 	void createChancePool(double followChance1, double followChance2);
 };

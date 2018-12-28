@@ -7,7 +7,7 @@ public:
 	ActionFunctorNext();
 	~ActionFunctorNext();
 	void operator()(int* clipArrIdx, int clipArrSize) {
-		(*clipArrIdx)++;
+		//(*clipArrIdx)++;
 	};
 };
 

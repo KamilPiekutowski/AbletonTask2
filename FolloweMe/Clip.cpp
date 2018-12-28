@@ -28,13 +28,26 @@ int Clip::chooseFollowAction()
 {
 	return 0;
 }
-int Clip::playClip(int* idx,int* engineTickNum)
+int Clip::playClip(int* idx, int clipArrSize, int* engineTickNum)
 {
 	while (m_itickCounter > 0 && *engineTickNum > 0)
 	{
 		--m_itickCounter; --(*engineTickNum);
 		std::cout << m_clipName + " ";
 	}
+
+	if(*engineTickNum > 0) //only if there are any ticks left from the engine
+	{ 
+		if (chooseFollowAction() == ACTION_1_CHANCE)
+		{
+			(*FollowAction1)(idx, clipArrSize);
+		}
+		else
+		{
+			(*FollowAction2)(idx, clipArrSize);
+		}
+	}
+
 
 	resetTickCount();
 
