@@ -18,8 +18,8 @@ public:
 		int clTicksToPlay,
 		double followChance1,
 		double followChance2,
-		IFollowActionFunctor* followAction1,
-		IFollowActionFunctor* followAction2);
+		std::string followAction1,
+		std::string followAction2);
 	~Clip();
 
 	//members
@@ -37,5 +37,6 @@ public:
 	int playClip(int* idx, int clipArrSize, int* engineTickNum);
 	int resetTickCount();
 	void createChancePool(double followChance1, double followChance2);
+	IFollowActionFunctor* createFollowActionFunctor(std::string followActionFunctrName);
 };
 

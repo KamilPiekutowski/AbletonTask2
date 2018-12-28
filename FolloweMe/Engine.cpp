@@ -9,6 +9,10 @@ Engine::Engine()
 
 Engine::~Engine()
 {
+	for (int i = 0; i < m_vClips.size(); i++)
+	{
+		delete m_vClips[i];
+	}
 }
 
 void Engine::Run()
@@ -21,21 +25,8 @@ void Engine::runClips()
 {
 	for (int idx = 0; (idx < m_vClips.size()) && m_iTickNum > 0; idx++)
 	{
-		m_vClips[idx].playClip(&idx, m_vClips.size(), &m_iTickNum);
-
-		int a = idx;
-
-		int b = 0;
+		m_vClips[idx]->playClip(&idx, m_vClips.size(), &m_iTickNum);
 	}
-}
-
-void Engine::runInputCommands(std::vector<std::string> *parsedCommands)
-{
-}
-
-void Engine::addClip(Clip clip)
-{
-
 }
 
 void Engine::getInput()
@@ -61,21 +52,20 @@ void Engine::getInput()
 			int clTicksToPlay = std::stoi(tokens[2], &sz);
 			double followChance1 = std::stod(tokens[3], &sz);
 			double followChance2 = std::stod(tokens[4], &sz);
-			IFollowActionFunctor* followAction1 = createFollowActionFunctor(tokens[5]);
-			IFollowActionFunctor* followeAction2 = createFollowActionFunctor(tokens[6]);
+			std::string followAction1 = tokens[5];
+			std::string followeAction2 = tokens[6];
 
+			
 
-			m_vClips.push_back(Clip(
+			m_vClips.push_back(new Clip(
 				clName,
 				clTicksToPlay,
 				followChance1,
 				followChance2,
 				followAction1,
-				followeAction2
-			));
-		}
-
-		
+				followeAction2)
+			);
+		}	
 	}
 
 	//get engine tick count
@@ -99,11 +89,3 @@ std::vector<std::string> Engine::tokenizeString(std::string str)
 	return tokens;
 }
 
-//this a simple version of factory
-IFollowActionFunctor* Engine::createFollowActionFunctor(std::string followActionFunctrName)
-{
-	ActionFunctorFactory aff;
-	IFollowActionFunctor* followActionFunctor = aff.getActionFunctor(followActionFunctrName);
-
-	return followActionFunctor;
-}

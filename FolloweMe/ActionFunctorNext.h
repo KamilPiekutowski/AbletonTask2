@@ -4,10 +4,9 @@ class ActionFunctorNext :
 	public FollowActionFunctor
 {
 public:
-	ActionFunctorNext();
-	~ActionFunctorNext();
+
 	void operator()(int* clipArrIdx, int clipArrSize) {
-		//(*clipArrIdx)++;
+		//do nothing
 	};
 };
 

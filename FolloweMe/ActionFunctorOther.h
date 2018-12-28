@@ -4,8 +4,7 @@ class ActionFunctorOther :
 	public FollowActionFunctor
 {
 public:
-	ActionFunctorOther();
-	~ActionFunctorOther();
+
 	void operator()(int* clipArrIdx, int clipArrSize) {
 		srand(time(NULL));
 

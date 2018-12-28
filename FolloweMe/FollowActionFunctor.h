@@ -8,4 +8,3 @@ class FollowActionFunctor :
 public:
 	void operator()(int* clipArrIdx, int clipArrSize) {};
 };
-

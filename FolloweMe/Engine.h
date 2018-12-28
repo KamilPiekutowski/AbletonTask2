@@ -16,15 +16,12 @@ public:
 	//members
 	int m_iTickNum;
 	int m_iTickCOunter;
-	std::vector<Clip> m_vClips;
+	std::vector<Clip*> m_vClips;
 	std::vector<std::vector<std::string>> m_vInputCommands;
 
 	//methods
 	void Run();
 	void runClips();
-	void runInputCommands(std::vector<std::string> *parsedCommands);
-	void addClip(Clip clip);
-	IFollowActionFunctor* createFollowActionFunctor(std::string followActionFunctrName);
 	void getInput();
 
 private:

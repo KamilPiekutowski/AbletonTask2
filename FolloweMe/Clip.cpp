@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Clip.h"
+#include "ActionFunctorFactory.h"
 
 
 Clip::Clip(
@@ -7,21 +8,38 @@ Clip::Clip(
 	int clTicksToPlay,
 	double followChance1,
 	double followChance2,
-	IFollowActionFunctor* followAction1,
-	IFollowActionFunctor* followAction2)
+	std::string followAction1,
+	std::string followAction2)
 {
 	m_clipName = name;
 	m_iTickNum = clTicksToPlay;
 	m_itickCounter = clTicksToPlay;
 	createChancePool(followChance1, followChance2);
 
-	FollowAction1 = followAction1;
-	FollowAction2 = followAction2;
+	FollowAction1 = createFollowActionFunctor(followAction1);
+	FollowAction2 = createFollowActionFunctor(followAction2);
 }
 
 
 Clip::~Clip()
 {
+	if(m_iPtrChancePool != NULL)
+	{ 
+		delete m_iPtrChancePool;
+		m_iPtrChancePool = NULL;
+	}
+
+	if (FollowAction1 != NULL)
+	{
+		delete FollowAction1;
+		FollowAction1 = NULL;
+	}
+
+	if (FollowAction2 != NULL)
+	{
+		delete FollowAction2;
+		FollowAction1 = NULL;
+	}
 }
 
 int Clip::chooseFollowAction()
@@ -78,4 +96,13 @@ void Clip::createChancePool(double followChance1, double followChance2)
 		m_iPtrChancePool[idx] = ACTION_2_CHANCE;
 	}
 
+}
+
+//this a simple version of factory
+IFollowActionFunctor* Clip::createFollowActionFunctor(std::string followActionFunctrName)
+{
+	ActionFunctorFactory aff;
+	IFollowActionFunctor* followActionFunctor = aff.getActionFunctor(followActionFunctrName);
+
+	return followActionFunctor;
 }

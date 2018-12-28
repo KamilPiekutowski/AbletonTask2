@@ -11,6 +11,5 @@ class ActionFunctorFactory
 {
 public:
 	IFollowActionFunctor* getActionFunctor(std::string followActionFunctrName);
-
 };
 

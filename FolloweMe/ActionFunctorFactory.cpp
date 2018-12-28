@@ -26,7 +26,6 @@ IFollowActionFunctor* ActionFunctorFactory::getActionFunctor(std::string followA
 	}
 	else
 	{
-
 		return NULL;
 	}
 }
