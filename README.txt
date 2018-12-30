@@ -13,7 +13,17 @@ $cd FolloweMe/Debug
 $FolloweMe.exe or $FolloweMe.exe < commands.txt
 
 USAGE
-Example:  ./FolloweMe.exe < commands.txt
+Example:  FolloweMe.exe < commands.txt
 
 1. Where redirection: "< commands.txt" is optional and could any file
 that contains proper commands.
+
+UML (Class Diagram)
+
+To see program UML please open ClassDiagram.cd while VS project is loaded.
+It is located in FolloweMe\FolloweMe folder.
+
+GIT
+
+This is a git repository, to view logs, type:
+$git logs 

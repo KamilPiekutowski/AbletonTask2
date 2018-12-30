@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ActionFunctorAny">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorAny.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionFunctorFactory">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionFunctorNext">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorNext.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionFunctorNone">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorNone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionFunctorOther">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorOther.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionFunctorPrevious">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionFunctorPrevious.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clip">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Clip::__unnamed_enum_0069_1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Clip.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAMNAAQAAAAAAABAAAiAAgAAAAAAIAAAIAA=</HashCode>
+      <FileName>Clip.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGAAAQAAAAACAAQAQAAAAAAAAAABAAAAAABIAI=</HashCode>
+      <FileName>Engine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowActionFunctor">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FollowActionFunctor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IClip">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAEAAAQAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IClip.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFollowActionFunctor">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFollowActionFunctor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
